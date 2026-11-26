@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDP Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🩸 FDP MANAGEMENT SYSTEM</h1>
+    <p>Advanced Blood Products for Saving Soldiers</p>
+</header>
+
+<nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#add">Add FDP</a>
+    <a href="#inventory">Inventory</a>
+    <a href="#about">About FDP</a>
+</nav>
+
+<section id="dashboard" class="dashboard">
+    <h2>FDP Dashboard</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Total Batches</h3>
+            <h2 id="total">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Total Units</h3>
+            <h2 id="units">0</h2>
+        </div>
+
+        <div class="card">
+            <h3>Available Batches</h3>
+            <h2 id="available">0</h2>
+        </div>
+    </div>
+</section>
+
+<section id="add">
+    <h2>Add FDP Batch</h2>
+
+    <form id="fdpForm">
+
+        <input type="text" id="batch"
+               placeholder="Batch Number" required>
+
+        <input type="text" id="product"
+               placeholder="Product Name" required>
+
+        <input type="number" id="quantity"
+               placeholder="Quantity" min="0" required>
+
+        <label>Expiry Date</label>
+        <input type="date" id="expiry" required>
+
+        <input type="text" id="location"
+               placeholder="Storage Location" required>
+
+        <button type="submit">Add FDP Batch</button>
+
+    </form>
+
+    <p id="message"></p>
+</section>
+
+<section id="inventory">
+    <h2>FDP Inventory Records</h2>
+
+    <button onclick="loadData()">Refresh Records</button>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Batch</th>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Expiry</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="tableBody"></tbody>
+        </table>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Freeze-Dried Plasma</h2>
+
+    <p>
+        Freeze-Dried Plasma (FDP) is a specially processed
+        blood plasma product designed for storage without
+        conventional refrigeration under its approved
+        storage conditions.
+    </p>
+
+    <p>
+        It can be reconstituted with the specified sterile
+        diluent according to its approved instructions.
+        It has potential applications in emergency medical
+        care, including military environments.
+    </p>
+
+    <p>
+        This website is an inventory demonstration project,
+        not a clinical transfusion or treatment system.
+    </p>
+</section>
+
+<footer>
+    <p>FDP Management System | Student Project</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

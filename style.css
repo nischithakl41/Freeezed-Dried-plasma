@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #a80024, #ed3154);
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+nav {
+    background: #7d001b;
+    padding: 16px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffd6df;
+}
+
+section {
+    background: white;
+    margin: 25px auto;
+    padding: 25px;
+    max-width: 1100px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+section h2 {
+    color: #a80024;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff0f3;
+    border-left: 5px solid #c00032;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 32px;
+    margin-top: 10px;
+}
+
+form {
+    display: grid;
+    gap: 15px;
+}
+
+input {
+    padding: 13px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    width: 100%;
+}
+
+button {
+    background: #b0002d;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #78001d;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: #a80024;
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background: #fff0f3;
+}
+
+#message {
+    color: green;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+footer {
+    background: #7d001b;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    section {
+        margin: 12px;
+        padding: 15px;
+    }
+}
